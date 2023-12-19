@@ -1,0 +1,164 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Ultra&display=swap');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    font-family: "PT Serif", serif;
+}
+/* make images full bleed on mobile*/
+img {
+  display: block;
+  width: 100%;
+}
+.center {
+    display: block;
+    width: 100%;
+    max-width:800px;
+    padding-bottom: 20px;
+}
+.icon {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  max-width:200px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.headcontainer{
+  display:block;
+  padding-top:20px;
+
+}
+p > span[aria-hidden=true].drop span {
+  font-family: "Ultra", serif;
+  font-size: 4.5rem;
+  float: left;
+  line-height: 1;
+  margin-right: 0.05em;
+/*   outline: 1px solid #f00; */
+}
+
+p > span[aria-hidden=true].drop span::before,
+p > span[aria-hidden=true].drop span::after {
+  content: "";
+  display: block;
+}
+
+p > span[aria-hidden=true].drop span::before {
+/*   margin-bottom: -0.175em; */
+  margin-bottom: -0.11em;
+}
+
+p > span[aria-hidden=true].drop span::after {
+  margin-top: -0.05em;
+}
+
+.visually-hidden, .hidden {
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+h1{
+  font-family: 'Ultra', serif;
+  font-size: 40px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+h3{
+  font-family: "PT Serif", serif;
+  font-size: 25px;
+}
+h4{
+  font-family: "Ultra", serif;
+  font-size: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+byline{
+  font-family: "PT Serif", serif;
+  font-style: italic;
+}
+p1{
+  font-family: "PT Serif", serif;
+  font-size: 16px;
+}
+p2{
+  font-family: "PT Serif", serif;
+  font-size: 13px;
+}
+
+.caption{
+  font-family: "PT Serif", serif;
+  font-size: 11px;
+  line-height: .7;
+
+}
+
+.container{
+  display:block;
+
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+    .flex{
+      display:flex;
+      justify-content: space-between;
+        }
+    .flex>div{
+      flex-basis:45%;
+}
+}
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
